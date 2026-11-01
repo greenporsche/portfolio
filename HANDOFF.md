@@ -23,9 +23,9 @@ Telemetry must be off, because Astro otherwise writes to ~/Library/Preferences, 
 
 ## Next
 
-1. **S1.1:** codex logs the navigation check, then marks it proven.
-2. **S1.2:** codex verifies it, then it merges to `main`. As kiku's media and Sisi's words arrive, drop them into each `src/content/projects/<slug>/` (the cover goes beside `index.md`).
-3. **S1.3:** publish once kiku picks hosting (board S2.1). The first deploy also proves the Pages workflow (#46628).
+1. **S1.1 and S1.2 are proven and merged.** `main` is at `ebe7679`, with all 41 projects, review fixes and reflow fix (codex-verified).
+2. **Content (current work):** as Sisi's words and media arrive, put them into each `src/content/projects/<slug>/` (the cover goes beside `index.md`). Never write his sections for him.
+3. **S1.3 is deferred by kiku (#46799):** the site stays local until kiku says it's content complete and polished, and picks hosting (S2.1). Then: Pages workflow, deploy, public URL and link checks, and the review re-run over the final content. Codex's checks so far cover build, navigation, keyboard, reflow and focus. They are not a publication-readiness or full accessibility sign-off; screen-reader output is unverified.
 
 ## Waiting on kiku and Sisi (board F2)
 
