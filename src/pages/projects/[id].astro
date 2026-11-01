@@ -1,0 +1,114 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { CATEGORIES, slugify } from '../../data/categories';
+
+export async function getStaticPaths() {
+  const order = CATEGORIES.map((c) => c.name);
+  const all = (await getCollection('projects')).sort(
+    (a, b) => order.indexOf(a.data.category) - order.indexOf(b.data.category) || a.data.order - b.data.order,
+  );
+  return all.map((project, i) => ({
+    params: { id: project.id },
+    props: { project, prev: all[i - 1], next: all[i + 1] },
+  }));
+}
+
+const { project, prev, next } = Astro.props;
+const { Content } = await render(project);
+const d = project.data;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const home = `${base}/`;
+const link = (id: string) => `${base}/projects/${id}/`;
+---
+<Base title={`${d.title} · Siddharth Krishna`} description={d.summary}>
+  <nav class="row crumb" aria-label="Breadcrumb">
+    <a href={home}>← Siddharth Krishna</a>
+    <a href={`${home}#${slugify(d.category)}`}>{d.category}</a>
+  </nav>
+
+  <header class="row ptitle">
+    <h1>{d.title}</h1>
+    {d.lede && <p>{d.lede}</p>}
+  </header>
+
+  {
+    (d.video || d.cover) && (
+      <figure class="row hero-media">
+        {d.video ? (
+          <video controls preload="metadata" poster={d.cover?.src} src={d.video} />
+        ) : (
+          d.cover && <Image src={d.cover} alt={d.coverAlt ?? ''} widths={[900, 1400, 1800]} sizes="100vw" />
+        )}
+        {d.caption && <figcaption class="cap">{d.caption}</figcaption>}
+      </figure>
+    )
+  }
+
+  <section class="row body">
+    <aside class="side">
+      {
+        d.stats.map((s) => (
+          <div class="stat">
+            <b>{s.value}</b>
+            {s.label}
+          </div>
+        ))
+      }
+      {
+        d.when && (
+          <dl>
+            <dt>When</dt>
+            <dd>{d.when}</dd>
+          </dl>
+        )
+      }
+      {
+        d.builtWith && (
+          <dl>
+            <dt>Built with</dt>
+            <dd>{d.builtWith}</dd>
+          </dl>
+        )
+      }
+      {
+        d.links.length > 0 && (
+          <dl>
+            <dt>Links</dt>
+            <dd>
+              {d.links.map((l, i) => (
+                <>
+                  {i > 0 && ' · '}
+                  <a href={l.href}>{l.label}</a>
+                </>
+              ))}
+            </dd>
+          </dl>
+        )
+      }
+    </aside>
+    <article class="prose">
+      <Content />
+    </article>
+  </section>
+
+  {
+    (prev || next) && (
+      <nav class="next" aria-label="More projects">
+        {prev && (
+          <a href={link(prev.id)}>
+            <span>Previous</span>
+            {prev.data.title}
+          </a>
+        )}
+        {next && (
+          <a href={link(next.id)}>
+            <span>Next</span>
+            {next.data.title}
+          </a>
+        )}
+      </nav>
+    )
+  }
+</Base>

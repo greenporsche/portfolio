@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Tile from '../components/Tile.astro';
+import { CATEGORIES, slugify } from '../data/categories';
+
+const all = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+
+// Build category -> [ {subgroup|null, projects} ] in the write-up's order; skip empty groups.
+const sections = CATEGORIES.map((c) => {
+  const inCat = all.filter((p) => p.data.category === c.name);
+  const groups = [null, ...c.subgroups]
+    .map((sub) => ({ sub, projects: inCat.filter((p) => (p.data.subgroup ?? null) === sub) }))
+    .filter((g) => g.projects.length > 0);
+  return { name: c.name, id: slugify(c.name), groups };
+}).filter((s) => s.groups.length > 0);
+---
+<Base title="Siddharth Krishna">
+  <header class="row name">
+    <h1>Siddharth<br />Krishna</h1>
+    <div class="facts">
+      <p>
+        Senior at Mountain House High School, California. I do research in math and machine learning, and I build
+        software.
+      </p>
+      <nav aria-label="Elsewhere"><a href="https://github.com/greenporsche">GitHub</a></nav>
+    </div>
+  </header>
+
+  {
+    sections.map((s) => (
+      <section aria-labelledby={s.id}>
+        <h2 class="row head" id={s.id}>{s.name}</h2>
+        {s.groups.map((g) => (
+          <>
+            {g.sub && <h3 class="row subhead">{g.sub}</h3>}
+            <div class="row tiles">
+              {g.projects.map((p) => (
+                <Tile project={p} />
+              ))}
+            </div>
+          </>
+        ))}
+      </section>
+    ))
+  }
+
+  <footer class="row awards">
+    <p>USA AI Olympiad, National Gold, 2025 and 2026. AIME qualifier, 2023 and 2024.</p>
+    <p>Section Leader, Stanford Code in Place, 2025 and 2026. Vice President, MHHS Math Club.</p>
+  </footer>
+</Base>

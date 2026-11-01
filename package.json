@@ -1,0 +1,14 @@
+{
+  "name": "sisi-portfolio",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "ui:check": "bun .agents/skills/ui/scripts/ui-check.mjs --tokens src/styles/tokens.css --lookbook src/pages/lookbook.astro src/styles src/components src/layouts src/pages src/data"
+  },
+  "dependencies": {
+    "astro": "7.3.8"
+  }
+}

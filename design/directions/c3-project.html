@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Directional Collision Principle · Siddharth Krishna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,500;62..125,800;62..125,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="c3.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="row crumb"><a href="c3-home.html">← Siddharth Krishna</a><a href="c3-home.html#research">Research</a></nav>
+
+  <header class="row ptitle">
+    <h1>Directional<br>Collision Principle</h1>
+    <p>A geometric theory that predicts which neural-network inputs are vulnerable to adversarial attack, validated on OpenAI's sparse circuits.</p>
+  </header>
+
+  <div class="row">
+    <div class="hero-media crop" role="img" aria-label="Before-and-after points for each successful attack; every one crosses the decision boundary g(v) = 0"></div>
+    <p class="cap">Every successful attack crosses the boundary g(v) = 0. Attacks pushing the other way never succeed. From symmetry_visualization.py.</p>
+  </div>
+
+  <section class="row body">
+    <aside class="side">
+      <div><b>87.5%</b>accuracy predicting vulnerable inputs before attacking</div>
+      <div><b>100%</b>recall, no vulnerable input missed</div>
+      <div><b>15.5×</b>more efficient than random perturbations</div>
+      <dl><dt>When</dt><dd>2025–2026. Science fair entry, January 2026</dd></dl>
+      <dl><dt>Built with</dt><dd>Python 3.11, uv, OpenAI sparse circuits</dd></dl>
+      <dl><dt>Links</dt><dd><a href="#">Paper</a> · <a href="https://github.com/greenporsche/Directional-Collision-Principle">Code and data</a></dd></dl>
+    </aside>
+
+    <article class="prose">
+      <h2>Why I built it</h2>
+      <p><span class="todo-text">[In Sisi's own words: what made him ask why some inputs break a network and others don't, and what he wanted to find out. The Academy asks exactly this.]</span></p>
+
+      <h2>How I built it</h2>
+      <p>I combined Lipschitz continuity bounds with the symmetry structure of sparse circuits. That gives a lower bound on how far an input sits from the decision boundary, and a per-family "directional budget" that says which way an attack has to push.</p>
+      <p>Then I tested the predictions on OpenAI's interpretable sparse circuits, on two independent tasks: bracket matching (estimated L ≈ 3.04) and quote matching (L ≈ 1.35). I predicted which inputs were vulnerable first and attacked second.</p>
+      <figure class="inline-fig">
+        <img src="assets/dcp-hero_figure_final.png" alt="Bar chart of attack success rate by strategy: random baseline 1.6%, combined circuit-informed attack 24.2%">
+        <figcaption>Circuit-informed attacks against a random baseline. The combined strategy succeeds 24.2% of the time against 1.6% for random.</figcaption>
+      </figure>
+      <h2>The hard part</h2>
+      <p><span class="todo-text">[What didn't work at first, and what he changed.]</span></p>
+
+      <h2>What I did</h2>
+      <ul>
+        <li>The theory: the distance bound and the directional budget. The underlying collision result is its own <a href="#">short note</a>.</li>
+        <li>All of the experiment code, data and figures in the repo.</li>
+        <li>The paper and the presentation. <span class="todo-text">[confirm, and name any mentor]</span></li>
+      </ul>
+
+      <h2>Where it stands</h2>
+      <p>Paper written, and the code and data are public. <span class="todo-text">[Next step, in his words.]</span></p>
+    </article>
+  </section>
+
+  <nav class="next"><a href="#"><span>Previous</span>Personal genome analysis</a><a href="#"><span>Next</span>A Quantitative Collision Principle</a></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+const { project } = Astro.props;
+const { title, summary, cover, coverAlt, wide } = project.data;
+const href = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/projects/${project.id}/`;
+---
+<a class:list={['tile', { wide }]} href={href}>
+  {
+    cover ? (
+      <span class="media">
+        <Image src={cover} alt={coverAlt ?? ''} widths={[600, 900, 1400]} sizes="(max-width: 820px) 100vw, 66vw" />
+      </span>
+    ) : (
+      <span class="media empty">[cover image or clip]</span>
+    )
+  }
+  <span class="label"><b>{title}</b><span>{summary}</span></span>
+</a>

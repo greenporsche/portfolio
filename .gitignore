@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+# agent tooling and runtime state (local only)
+.mcp.json
+.claude/settings.local.json
+.codex/
+.gemini/
+CLAUDE.local.md
+.agents/
+.claude/

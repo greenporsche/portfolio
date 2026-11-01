@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction A · Lab Notebook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FBFAF6; --grid:#E9ECF2; --margin:#E8A5A0;
+  --ink:#1B2A4A; --ink-soft:#4A5878; --line:#D9DDE6;
+  --mark:#FFF1A8; --pen:#2F5BD3;
+  --live:#1F7A4D; --building:#A86A00; --planned:#7A7F8C;
+  --serif:"Newsreader",Georgia,serif; --mono:"IBM Plex Mono",ui-monospace,monospace; --hand:"Caveat",cursive;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:72px;
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.55;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px}
+.page{max-width:1080px;margin:0 auto;padding:var(--s7) var(--s5) var(--s8);position:relative}
+.page::before{content:"";position:absolute;top:0;bottom:0;left:var(--s5);border-left:2px solid var(--margin);opacity:.7}
+.inner{padding-left:var(--s6)}
+nav{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:var(--s8)}
+nav a{color:inherit;text-decoration:none;margin-left:var(--s5)}
+nav b{color:var(--ink);font-weight:500}
+.eyebrow{font-family:var(--mono);font-size:13px;color:var(--ink-soft);letter-spacing:.06em;text-transform:uppercase}
+h1{font-size:clamp(44px,7vw,84px);line-height:1.02;font-weight:500;letter-spacing:-.02em;margin:var(--s3) 0 var(--s5)}
+h1 em{font-style:italic;background:linear-gradient(transparent 62%,var(--mark) 62%)}
+.lede{max-width:620px;font-size:21px;color:var(--ink-soft)}
+.note{font-family:var(--hand);color:var(--pen);font-size:24px;transform:rotate(-2deg);display:inline-block}
+.hero{position:relative}
+.hero > .note{margin-top:var(--s3)}
+.thm{margin-top:var(--s6);max-width:620px;border-left:3px solid var(--ink);padding:var(--s3) var(--s5);background:var(--paper);position:relative}
+.thm figcaption{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft)}
+.eq{font-size:26px;margin:var(--s3) 0;display:flex;align-items:center;gap:var(--s3)}
+.frac{display:inline-flex;flex-direction:column;text-align:center;font-size:22px}
+.frac span:first-child{border-bottom:1.5px solid var(--ink);padding:0 var(--s1)}
+.thm p{font-size:16px;color:var(--ink-soft)}
+.thm .note{position:absolute;right:calc(-1 * var(--s8));top:var(--s4);font-size:21px;transform:rotate(4deg)}
+@media (max-width:900px){.thm .note{position:static}}
+.stats{display:flex;flex-wrap:wrap;gap:var(--s6);margin:var(--s7) 0 var(--s8);font-family:var(--mono);font-size:13px;color:var(--ink-soft)}
+.stats strong{display:block;font-family:var(--serif);font-size:30px;color:var(--ink);font-weight:500}
+h2{font-size:30px;font-weight:500;display:flex;align-items:baseline;gap:var(--s3);margin-bottom:var(--s5);border-bottom:1px solid var(--line);padding-bottom:var(--s2)}
+h2 .num{font-family:var(--mono);font-size:14px;color:var(--ink-soft)}
+section{margin-bottom:var(--s8)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--s5)}
+.card{background:var(--paper);border:1px solid var(--line);padding:var(--s5);position:relative;box-shadow:0 1px 0 var(--line)}
+.card.feature{border-color:var(--ink)}
+.card h3{font-size:23px;font-weight:600;line-height:1.2;margin:var(--s2) 0}
+.card p{font-size:16px;color:var(--ink-soft)}
+.meta{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12px;color:var(--ink-soft);letter-spacing:.04em;text-transform:uppercase}
+.status::before{content:"● ";}
+.live{color:var(--live)} .building{color:var(--building)} .planned{color:var(--planned)}
+.part{margin-top:var(--s3);font-size:15px}
+.part b{font-family:var(--mono);font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;color:var(--ink)}
+.links{margin-top:var(--s4);font-family:var(--mono);font-size:13px}
+.links a{color:var(--pen);margin-right:var(--s4)}
+.card .note{position:absolute;right:var(--s4);bottom:var(--s3);font-size:20px}
+@media (max-width:640px){
+  .page::before{left:var(--s3)} .inner{padding-left:var(--s4)} .page{padding:var(--s5) var(--s4) var(--s7)}
+  nav span{display:none} .hero .note{position:static;margin-top:var(--s4);text-align:left}
+}
+.nc{text-transform:none}
+</style>
+</head>
+<body>
+<div class="page"><div class="inner">
+  <nav><b>Siddharth Krishna</b><span><a href="#">Research</a><a href="#">Racing</a><a href="#">Utils</a><a href="#">Learning</a><a href="#">About</a></span></nav>
+
+  <header class="hero">
+    <div class="eyebrow">Senior · Mountain House, CA · Class of 2027</div>
+    <h1>I build things to find out<br>how they <em>actually work.</em></h1>
+    <p class="lede">Math and AI research, browser tools for racing, and a stack of apps I use every day. This is the work, with what I did on each.</p>
+    <span class="note">← sample copy, Sisi writes the real version</span>
+    <figure class="thm">
+      <figcaption>Main bound, §4 · from my <span class="nc">τ</span>-Collision note, Jan 2026</figcaption>
+      <div class="eq"><span>dist(<i>v</i>, <i>Z</i>) &ge;</span> <span class="frac"><span>|<i>A</i>(<i>v</i>) &minus; <i>A</i>(<i>τ</i>(<i>v</i>))|</span><span><i>L</i>(1 + <i>K</i>)</span></span></div>
+      <p>The more asymmetric the value at a point, the farther it must be from any collision. Lipschitz regularity acts as a speed limit.</p>
+      <span class="note">the bound is sharp ✓</span>
+    </figure>
+  </header>
+
+  <div class="stats">
+    <div><strong>2×</strong>USAAIO National Gold</div>
+    <div><strong>2×</strong>AIME qualifier</div>
+    <div><strong>2×</strong>Code in Place section leader</div>
+    <div><strong>30+</strong>projects in this notebook</div>
+  </div>
+
+  <section>
+    <h2><span class="num">01</span>Start here</h2>
+    <div class="grid">
+      <article class="card feature">
+        <div class="meta"><span>Research</span><span class="status live">Live</span></div>
+        <h3>Directional Collision Principle</h3>
+        <p>A geometric theory that predicts which neural-network inputs are vulnerable to adversarial attack.</p>
+        <p class="part"><b>My part</b> · theory, experiments, paper</p>
+        <div class="links"><a href="#">Paper</a><a href="#">Code</a></div>
+      </article>
+      <article class="card feature">
+        <div class="meta"><span>Racing</span><span class="status building">Building</span></div>
+        <h3>F1 Tracks Explorer</h3>
+        <p>Every Formula 1 circuit in the browser: corners, elevation and racing lines you can scrub through.</p>
+        <p class="part"><b>My part</b> · design, data pipeline, 3D view</p>
+        <div class="links"><a href="#">Demo</a><a href="#">Code</a></div>
+      </article>
+      <article class="card feature">
+        <div class="meta"><span>MetaMatx</span><span class="status building">Building</span></div>
+        <h3>Course Knowledge-Graph Viewer</h3>
+        <p>Turns a course into a map of its concepts, so you can walk the prerequisites before the lecture.</p>
+        <p class="part"><b>My part</b> · graph extraction, viewer</p>
+        <div class="links"><a href="#">Demo</a></div>
+        <span class="note">favorite</span>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>Racing</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="meta"><span>Sim racing</span><span class="status building">Building</span></div>
+        <h3>Assetto Corsa · Jev</h3>
+        <p>Machine-learning driver for Assetto Corsa that learns a lap from telemetry.</p>
+        <p class="part"><b>My part</b> · to be written</p>
+      </article>
+      <article class="card">
+        <div class="meta"><span>Utils</span><span class="status planned">Planned</span></div>
+        <h3>samgram</h3>
+        <p>TweetDeck-style columns for following a crowd's conversation at once.</p>
+        <p class="part"><b>My part</b> · to be written</p>
+      </article>
+    </div>
+  </section>
+</div></div>
+</body>
+</html>

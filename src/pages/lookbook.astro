@@ -1,0 +1,108 @@
+---
+// Lookbook (ui skill, routes/lookbook.md): the design system as it really renders.
+// Tokens draw automatically from tokens.css; parts below use the real components and classes.
+import { getCollection } from 'astro:content';
+import '../styles/tokens.css';
+import '../styles/site.css';
+import Tile from '../components/Tile.astro';
+const [example] = await getCollection('projects');
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Lookbook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,500;62..125,800;62..125,900&display=swap" rel="stylesheet">
+  <style is:inline>
+    /* The lookbook's own frame. It is not part of the design system, so ui-check skips this file. */
+    .lb { font: 14px/1.5 system-ui, sans-serif; max-width: 1100px; margin: 0 auto; padding: 24px 16px 64px; }
+    .lb h1 { font-size: 22px; margin: 0 0 4px; }
+    .lb h2 { font-size: 16px; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 1px solid color-mix(in srgb, currentColor 15%, transparent); }
+    .lb-meta { opacity: .7; margin: 0 0 16px; }
+    .lb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+    .lb-token { border: 1px solid color-mix(in srgb, currentColor 15%, transparent); border-radius: 6px; overflow: hidden; font-size: 12px; }
+    .lb-swatch { height: 56px; }
+    .lb-bar { height: 12px; margin: 12px 10px 0; background: currentColor; opacity: .55; border-radius: 2px; }
+    .lb-token code { display: block; padding: 6px 10px 0; font-weight: 600; word-break: break-all; }
+    .lb-token span { display: block; padding: 0 10px 8px; opacity: .7; word-break: break-all; }
+    .lb-part { padding: 16px; border: 1px dashed color-mix(in srgb, currentColor 25%, transparent); border-radius: 6px; margin-bottom: 12px; }
+    .lb-part > .lb-label { font-size: 12px; opacity: .7; margin-bottom: 8px; }
+    .lb-screen { width: 100%; height: 640px; border: 1px solid color-mix(in srgb, currentColor 15%, transparent); border-radius: 6px; }
+    .lb-ref { border-left: 4px solid #c9a227; padding-left: 12px; }
+    .lb-toggle { float: right; }
+  </style>
+</head>
+<body>
+<main class="lb" data-ui-tokens="auto">
+  <h1>Lookbook</h1>
+  <p class="lb-meta">The approved design system (DESIGN.md, approved by kiku 2026-11-01), drawn from the site's own stylesheets. No dark mode in v1.</p>
+
+  <h2>Tokens</h2>
+  <div id="lb-colors" class="lb-grid"></div>
+  <div id="lb-sizes" class="lb-grid"></div>
+  <div id="lb-other" class="lb-grid"></div>
+
+  <h2>Parts</h2>
+  <div class="lb-part"><div class="lb-label">Section band</div><h2 class="row head">Research</h2></div>
+  <div class="lb-part"><div class="lb-label">Subsection band</div><h3 class="row subhead">Personal productivity</h3></div>
+  <div class="lb-part"><div class="lb-label">Tile: with cover, and empty media slot</div>
+    <div class="row tiles">
+      {example && <Tile project={example} />}
+      <a class="tile" href="#"><span class="media empty">[cover image or clip]</span><span class="label"><b>Empty slot</b><span>Shown until real media arrives.</span></span></a>
+    </div>
+  </div>
+  <div class="lb-part"><div class="lb-label">Link</div><p><a href="#">Code and data</a></p></div>
+
+  <h2>Screens</h2>
+  <iframe class="lb-screen" src="./" title="Home"></iframe>
+
+  <h2>References: not approved</h2>
+  <div class="lb-ref"><p class="lb-meta">jessemeria.com and the getdesign.md portfolio template (kiku, 2026-11-01, #46606). Screenshots in design/references/. Taken from them: real photography and a real reason; a plain editorial list.</p></div>
+</main>
+<script is:inline>
+  // Draw every custom property defined on :root in the loaded stylesheets.
+  function rootTokens() {
+    const names = new Set();
+    // Style rules can hold nested rules too, and @media blocks hold rules, so walk them all.
+    const visit = (rules) => {
+      for (const r of rules) {
+        if (r.selectorText && r.selectorText.includes(":root")) {
+          for (const prop of r.style) if (prop.startsWith("--")) names.add(prop);
+        }
+        if (r.cssRules) visit(r.cssRules);
+      }
+    };
+    for (const sheet of document.styleSheets) {
+      try { visit(sheet.cssRules); } catch { /* a stylesheet from another origin can't be read */ }
+    }
+    return [...names].sort();
+  }
+  function card(name, value, kind) {
+    const el = document.createElement("div");
+    el.className = "lb-token";
+    const top = document.createElement("div");
+    if (kind === "color") { top.className = "lb-swatch"; top.style.background = `var(${name})`; }
+    if (kind === "size") { top.className = "lb-bar"; top.style.width = `min(var(${name}), 150px)`; }
+    el.append(top);
+    const code = document.createElement("code"); code.textContent = name;
+    const val = document.createElement("span"); val.textContent = value;
+    el.append(code, val);
+    return el;
+  }
+  function draw() {
+    const root = getComputedStyle(document.documentElement);
+    for (const id of ["lb-colors", "lb-sizes", "lb-other"]) document.getElementById(id).replaceChildren();
+    for (const name of rootTokens()) {
+      const value = root.getPropertyValue(name).trim();
+      const kind = CSS.supports("color", value) ? "color" : CSS.supports("width", value) ? "size" : "other";
+      const target = { color: "lb-colors", size: "lb-sizes", other: "lb-other" }[kind];
+      document.getElementById(target).append(card(name, value, kind));
+    }
+  }
+  draw();
+  new MutationObserver(draw).observe(document.documentElement, { attributes: true });
+</script>
+</body>
+</html>
