@@ -33,17 +33,17 @@
 
   /* Typography (DESIGN.md typography tokens) */
   --font: "Archivo", Helvetica, Arial, sans-serif;
-  --text-display: clamp(56px, 11.5vw, 168px);
-  --text-display-project: clamp(48px, 8vw, 120px);
-  --text-section: 28px;
-  --text-title-lg: 30px;
-  --text-title-md: 26px;
-  --text-subsection: 16px;
-  --text-stat: 30px;
-  --text-lede: 22px;
-  --text-body: 18px;
-  --text-body-sm: 16px;
-  --text-caption: 14px;
+  --text-display: clamp(3.5rem, 11.5vw, 10.5rem);
+  --text-display-project: clamp(3rem, 8vw, 7.5rem);
+  --text-section: 1.75rem;
+  --text-title-lg: 1.875rem;
+  --text-title-md: 1.625rem;
+  --text-subsection: 1rem;
+  --text-stat: 1.875rem;
+  --text-lede: 1.375rem;
+  --text-body: 1.125rem;
+  --text-body-sm: 1rem;
+  --text-caption: 0.875rem;
   --leading-display: 0.84;
   --leading-display-project: 0.86;
   --leading-tight: 1;

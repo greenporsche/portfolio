@@ -2,7 +2,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; }
 body { background: var(--surface); color: var(--ink); font-family: var(--font); font-size: var(--text-body); line-height: var(--leading-body); }
 a { color: var(--link); text-underline-offset: var(--underline-offset); text-decoration-thickness: var(--underline); }
-:focus-visible { outline: var(--focus-ring) solid var(--link); outline-offset: calc(-1 * var(--focus-ring)); }
+:focus-visible { outline: var(--focus-ring) solid var(--link); outline-offset: var(--spacing-xs); }
 img { display: block; max-width: 100%; height: auto; }
 
 .wrap { border-left: var(--rule); border-right: var(--rule); max-width: var(--spacing-page-max); margin: 0 auto; min-height: 100vh; }
@@ -24,13 +24,17 @@ img { display: block; max-width: 100%; height: auto; }
 .tile { display: flex; flex-direction: column; color: var(--ink); text-decoration: none; position: relative; }
 .tile::after { content: ""; position: absolute; inset: 0; z-index: 1; border-right: var(--rule); border-bottom: var(--rule); pointer-events: none; }
 .tile.wide { grid-column: span 2; }
+.tile:focus-visible { outline-offset: calc(-1 * (var(--focus-ring) + var(--spacing-rule))); }
 .media { display: grid; place-items: center; aspect-ratio: 890 / 600; overflow: hidden; background: var(--wash); color: var(--ink-soft); font-size: var(--text-caption); text-align: center; border-bottom: var(--rule); }
 .media img { width: 100%; height: 100%; object-fit: cover; }
 .media.empty { padding: var(--spacing-lg); }
 .label { padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-xl); display: flex; flex-direction: column; gap: var(--spacing-xs); }
 .label b { font-size: var(--text-title-md); line-height: var(--leading-tight); font-weight: 800; font-stretch: var(--width-heading); text-transform: uppercase; }
 .label span { color: var(--ink-soft); font-size: var(--text-body-sm); }
-.tile:hover .label b, .tile:focus-visible .label b { text-decoration: underline; text-decoration-thickness: var(--underline-strong); text-underline-offset: var(--underline-offset-strong); }
+.tile:focus-visible .label b { text-decoration: underline; text-decoration-thickness: var(--underline-strong); text-underline-offset: var(--underline-offset-strong); }
+@media (hover: hover) {
+  .tile:hover .label b { text-decoration: underline; text-decoration-thickness: var(--underline-strong); text-underline-offset: var(--underline-offset-strong); }
+}
 
 .awards { padding: var(--spacing-xl); }
 .awards p + p { margin-top: var(--spacing-sm); }
@@ -44,6 +48,7 @@ img { display: block; max-width: 100%; height: auto; }
 .hero-media img, .hero-media video { width: 100%; }
 .cap { padding: var(--spacing-md) var(--spacing-xl); font-size: var(--text-caption); color: var(--ink-soft); border-top: var(--rule); }
 .body { display: grid; grid-template-columns: var(--spacing-side-column) 1fr; }
+.body.solo { grid-template-columns: 1fr; }
 .side { border-right: var(--rule); padding: var(--spacing-xl); display: flex; flex-direction: column; gap: var(--spacing-xl); font-size: var(--text-body-sm); }
 .side dt { font-weight: 800; font-stretch: var(--width-section); text-transform: uppercase; font-size: var(--text-caption); }
 .side dd { margin: 0; }
@@ -51,7 +56,7 @@ img { display: block; max-width: 100%; height: auto; }
 .prose { padding: var(--spacing-2xl) var(--spacing-xl) var(--spacing-3xl); }
 .prose h2 { font-size: var(--text-title-lg); font-weight: 800; font-stretch: var(--width-heading); text-transform: uppercase; line-height: var(--leading-tight); margin: var(--spacing-3xl) 0 var(--spacing-md); }
 .prose h2:first-child { margin-top: 0; }
-.prose p, .prose ul { max-width: var(--spacing-measure); }
+.prose p, .prose ul { max-width: min(var(--spacing-measure), 65ch); }
 .prose p + p { margin-top: var(--spacing-md); }
 .prose ul { padding-left: var(--spacing-xl); }
 .prose li + li { margin-top: var(--spacing-sm); }
@@ -74,7 +79,4 @@ img { display: block; max-width: 100%; height: auto; }
   .side { border-right: 0; border-bottom: var(--rule); display: grid; grid-template-columns: 1fr 1fr; }
   .next { grid-template-columns: 1fr; }
   .next a + a { border-left: 0; border-top: var(--rule); text-align: left; }
-}
-@media (prefers-reduced-motion: no-preference) {
-  .tile .label b { transition: text-decoration-color var(--motion-fast); }
 }

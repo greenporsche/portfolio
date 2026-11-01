@@ -133,6 +133,7 @@ One family, **Archivo** (variable, with a width axis), from Google Fonts.
 - **Section** bands and **titles** (tile and project-section headings): weight 800, width 75–80%, uppercase.
 - **Body**: weight 400 at normal width, 18px, set in sentence case. Long text is capped at the 680px measure.
 - **Captions**: 14px, secondary color.
+- **Units:** sizes here are in px at the default 16px root. `tokens.css` states the same sizes in rem (1rem = 16px), so a reader's browser text-size setting applies. Long text is also capped at 65 characters.
 
 Uppercase is for display and headings only. Never use letter-spaced small caps labels.
 

@@ -4,7 +4,7 @@ category: Research
 order: 1
 wide: true
 summary: Predicting which neural-network inputs are vulnerable to attack. 87.5% accuracy, 100% recall.
-lede: A geometric theory that predicts which neural-network inputs are vulnerable to adversarial attack, validated on OpenAI's sparse circuits.
+lede: A geometric theory that predicts which neural-network inputs are vulnerable to adversarial attack, validated on OpenAI’s sparse circuits.
 cover: ./cover.png
 coverAlt: Before-and-after points for each successful attack. Every one crosses the decision boundary at g(v) = 0.
 caption: Every successful attack crosses the boundary g(v) = 0. Attacks pushing the other way never succeed. From symmetry_visualization.py.

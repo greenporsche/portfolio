@@ -21,6 +21,7 @@ const d = project.data;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const home = `${base}/`;
 const link = (id: string) => `${base}/projects/${id}/`;
+const hasSide = d.stats.length > 0 || !!d.when || !!d.builtWith || d.links.length > 0;
 ---
 <Base title={`${d.title} · Siddharth Krishna`} description={d.summary}>
   <nav class="row crumb" aria-label="Breadcrumb">
@@ -46,7 +47,8 @@ const link = (id: string) => `${base}/projects/${id}/`;
     )
   }
 
-  <section class="row body">
+  <section class:list={['row body', { solo: !hasSide }]}>
+    {hasSide && (
     <aside class="side">
       {
         d.stats.map((s) => (
@@ -88,6 +90,7 @@ const link = (id: string) => `${base}/projects/${id}/`;
         )
       }
     </aside>
+    )}
     <article class="prose">
       <Content />
     </article>
