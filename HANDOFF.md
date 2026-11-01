@@ -7,7 +7,9 @@ Room 78 ("portfolio"), board plan 47. PM: claude. EM and verifier: codex. PO: ki
 - **Goal:** Siddharth Krishna's (Sisi) portfolio for The Academy's early deadline, **Thu 2026-11-05**. The site must be live and link-checked by **Tue 11-03**.
 - **Design:** direction C, third pass, approved by kiku (#46622). `DESIGN.md` lints with 0 errors. Tokens are in `src/styles/tokens.css`, and the lookbook is at `/lookbook/`.
 - **Stack (EM ruling #46624):** Astro 7.3.8, TypeScript and plain CSS, built as a static site. There is one content collection, `src/content/projects/<slug>/index.md`, with its media beside it. It drives both the home tiles (`src/pages/index.astro`) and `/projects/<slug>/` (`src/pages/projects/[id].astro`). Category order is in `src/data/categories.ts`.
-- **S1.1 working slice:** built at `3bc955c`. It has the home page with the Directional Collision tile and the full project page for that tile. Evidence is in `design/evidence/s1.1/`. **Codex verified it independently (#46635):** codex rebuilt the site, checked home, project and lookbook with their local links and media, and reviewed the phone screenshot. `ui:check` is clean, with the CSS-only limit noted. There was no automated click test, because the MCP browser daemon was unavailable. Codex signed off for a local merge, and it is merged to `main`.
+- **Repo move:** kiku moved the repo to this folder to fix git identity (#46778). The new repo has none of the old history (`3bc955c`, `cecf208`, `affddaf` no longer exist). The fresh starting commit is `2542f19` on `main`, authored as greenporsche.
+- **S1.1 working slice:** the home page with the Directional Collision tile, plus that tile's full project page. Evidence is in `design/evidence/s1.1/`. Codex verified `2542f19` (#46783): the build passes, all local links resolve, and `ui:check` is clean (CSS only). Still missing for proven: codex's desktop/phone navigation check, which only a non-author can log. The preview deploy moved to S1.3.
+- **S1.2 full inventory:** branch `slice/s1.2-full-inventory`. All 41 projects are entries in the content collection, generated from `design/directions/gen_home.py`. Every tile reaches its own page (43 pages built). Covers and copy are placeholders until kiku and Sisi supply them. Evidence is in `design/evidence/s1.2/`.
 - **Permissions:** a local git repo only. **Do not push to GitHub or deploy** until kiku says so (#46630).
 
 ## Commands
@@ -21,9 +23,9 @@ Telemetry must be off, because Astro otherwise writes to ~/Library/Preferences, 
 
 ## Next
 
-1. Done: S1.1 verified (codex #46635) and merged to `main`. **The board still shows S1.1 `in_progress`**, because the server refused the move to proven: this MCP session was not tied to the repo (#46636). After the restart with `--cwd <repo>`, attach commit proof (`3bc955c`, merge tip `affddaf`) and let codex mark it proven. No rebuild is needed.
-2. **S1.2:** add the other 40 projects from kiku's write-up. Their names, groups and one-liners are already in `design/directions/gen_home.py`, so turn each into a `src/content/projects/<slug>/index.md`.
-3. **S1.3:** publish once kiku picks hosting (board S2.1). The first slice proves the Pages workflow when that is authorized (#46628).
+1. **S1.1:** codex logs the navigation check, then marks it proven.
+2. **S1.2:** codex verifies it, then it merges to `main`. As kiku's media and Sisi's words arrive, drop them into each `src/content/projects/<slug>/` (the cover goes beside `index.md`).
+3. **S1.3:** publish once kiku picks hosting (board S2.1). The first deploy also proves the Pages workflow (#46628).
 
 ## Waiting on kiku and Sisi (board F2)
 
