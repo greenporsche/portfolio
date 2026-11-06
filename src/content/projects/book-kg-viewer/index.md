@@ -1,13 +1,13 @@
 ---
 published: true
-title: "Book KG viewer"
+title: "MetaMatx"
 category: "Catalog + Consume"
 subgroup: "CourseTube"
 order: 29
 summary: "Murphy's ML textbook as a graph: 4,812 entries and 20,207 prerequisite links."
 lede: "A page that opens a whole textbook as a graph of what each idea needs. It runs on Kevin Murphy's Probabilistic Machine Learning, built from AI-written concept maps of every chapter."
 cover: ./cover.png
-coverAlt: "The Book KG viewer on Exact line search, Chapter 8. Seven cards feed it from left to right, and the sidebar shows the concept map's notes for it with equation 8.21 typeset."
+coverAlt: "MetaMatx on Exact line search, Chapter 8. Seven cards feed it from left to right, and the sidebar shows the concept map's notes for it with equation 8.21 typeset."
 caption: "Exact line search and the seven entries it needs, laid out left to right. The sidebar shows the concept map's notes. Screenshot of the running page."
 stats:
   - value: "4,812"

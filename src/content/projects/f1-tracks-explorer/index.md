@@ -1,6 +1,6 @@
 ---
 published: true
-title: "F1 Tracks Explorer"
+title: "drYve.fast"
 category: "Racing"
 order: 7
 wide: true
