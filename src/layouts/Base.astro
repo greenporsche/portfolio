@@ -26,5 +26,7 @@ const { title, description = 'Siddharth Krishna: research in math and machine le
     <main class="wrap">
       <slot />
     </main>
+    <!-- Visitor analytics: one report per full page load, live site only. /v is forwarded by vercel.json. -->
+    <script is:inline>if (location.hostname === 'portfolio.siddharthkrishna.com') navigator.sendBeacon("/v", JSON.stringify({ host: location.hostname, path: location.pathname + location.search, ref: document.referrer }));</script>
   </body>
 </html>
