@@ -57,7 +57,7 @@ img { display: block; max-width: 100%; height: auto; }
 .prose h2 { font-size: var(--text-title-lg); font-weight: 800; font-stretch: var(--width-heading); text-transform: uppercase; line-height: var(--leading-tight); margin: var(--spacing-3xl) 0 var(--spacing-md); }
 .prose h2:first-child { margin-top: 0; }
 .prose p, .prose ul { max-width: min(var(--spacing-measure), 65ch); }
-.prose p + p { margin-top: var(--spacing-md); }
+.prose p + p, .prose p + ul, .prose ul + p { margin-top: var(--spacing-md); }
 .prose ul { padding-left: var(--spacing-xl); }
 .prose li + li { margin-top: var(--spacing-sm); }
 .prose mark { background: var(--wash); color: var(--ink); padding: 0 var(--spacing-xs); }
