@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Stability Analysis in Dynamical Systems"
 category: "Research"
 order: 4

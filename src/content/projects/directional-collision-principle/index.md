@@ -1,4 +1,5 @@
 ---
+published: true
 title: Directional Collision Principle
 category: Research
 order: 1
