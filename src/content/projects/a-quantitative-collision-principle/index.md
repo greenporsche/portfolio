@@ -1,4 +1,5 @@
 ---
+published: true
 title: "A Quantitative Collision Principle"
 category: "Research"
 order: 2

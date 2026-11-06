@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Personal genome analysis"
 category: "Research"
 order: 5

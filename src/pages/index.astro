@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 import Tile from '../components/Tile.astro';
 import { CATEGORIES, slugify } from '../data/categories';
 
-const all = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const all = (await getCollection('projects', (p) => p.data.published)).sort((a, b) => a.data.order - b.data.order);
 
 // Build category -> [ {subgroup|null, projects} ] in the write-up's order; skip empty groups.
 const sections = CATEGORIES.map((c) => {

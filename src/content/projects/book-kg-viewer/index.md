@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Book KG viewer"
 category: "Catalog + Consume"
 subgroup: "CourseTube"
