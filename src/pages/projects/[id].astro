@@ -6,7 +6,7 @@ import { CATEGORIES, slugify } from '../../data/categories';
 
 export async function getStaticPaths() {
   const order = CATEGORIES.map((c) => c.name);
-  const all = (await getCollection('projects')).sort(
+  const all = (await getCollection('projects', (p) => p.data.published)).sort(
     (a, b) => order.indexOf(a.data.category) - order.indexOf(b.data.category) || a.data.order - b.data.order,
   );
   return all.map((project, i) => ({

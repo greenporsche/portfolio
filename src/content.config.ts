@@ -24,6 +24,8 @@ const projects = defineCollection({
       when: z.string().optional(),
       builtWith: z.string().optional(),
       links: z.array(z.object({ label: z.string(), href: z.string() })).default([]),
+      // Release switch: only projects with published: true get a home tile and a page.
+      published: z.boolean().default(false),
     }),
 });
 
