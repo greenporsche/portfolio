@@ -18,6 +18,11 @@ stats:
     label: less total curvature in Spa's racing line after the QP (0.61 → 0.45 per m)
 when: November 2026
 builtWith: TypeScript, Vite, three.js, Rapier 3D, geotiff, Python, OSQP, TUM trajectory_planning_helpers
+links:
+  - label: Drive it (dryve.fast)
+    href: https://dryve.fast/
+  - label: Code
+    href: https://github.com/greenporsche/drYve
 ---
 
 ## Why I built it
@@ -64,4 +69,4 @@ Some gaps are still open. Braking stops about a quarter shorter than Brembo's fi
 
 ## Where it stands
 
-Both circuits drive with clean autopilot laps in Simulation mode. On Spa it laps in 108.7 s, against Norris's 2025 pole of 1:40.562. Corner speeds don't match the real lap yet. The plan is to use it as the platform for a research project: a Lean-checked guardian that keeps an AI learner able to brake in time for La Source. It is a plan with no results yet. The code is not public.
+Both circuits drive with clean autopilot laps in Simulation mode. On Spa it laps in 108.7 s, against Norris's 2025 pole of 1:40.562. Corner speeds don't match the real lap yet. The plan is to use it as the platform for a research project: a Lean-checked guardian that keeps an AI learner able to brake in time for La Source. It is a plan with no results yet.

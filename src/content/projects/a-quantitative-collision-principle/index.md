@@ -19,9 +19,9 @@ when: January 2026
 builtWith: LaTeX
 links:
   - label: The note (PDF)
-    href: https://github.com/greenporsche/Directional-Collision-Principle/blob/main/research/%CF%84-Collision%20Short%20Note.pdf
+    href: https://github.com/greenporsche/Tau-Collision-Short-Note/blob/main/%CF%84-Collision-note.pdf
   - label: Project repo
-    href: https://github.com/greenporsche/Directional-Collision-Principle
+    href: https://github.com/greenporsche/Tau-Collision-Short-Note
 ---
 
 ## Why I built it
