@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 
-// Static build. `site` and `base` are set when the hosting destination is decided (board S2.1).
+// Static build, hosted on Vercel at the portfolio subdomain (served from the root path).
 export default defineConfig({
+  site: 'https://portfolio.siddharthkrishna.com',
   output: 'static',
 });
