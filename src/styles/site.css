@@ -36,7 +36,7 @@ img { display: block; max-width: 100%; height: auto; }
   .tile:hover .label b { text-decoration: underline; text-decoration-thickness: var(--underline-strong); text-underline-offset: var(--underline-offset-strong); }
 }
 
-.awards { padding: var(--spacing-xl); }
+.awards { padding: var(--spacing-xl); background: var(--wash); font-weight: 500; }
 .awards p + p { margin-top: var(--spacing-sm); }
 
 /* Project page */

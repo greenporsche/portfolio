@@ -6,8 +6,8 @@ order: 8
 summary: "The portfolio itself, and how it was made."
 lede: "A static site that puts my projects in one place. AI coding agents designed and built it. A person chose the design."
 cover: ./cover.png
-coverAlt: "Four home-page mockups side by side: a cream notebook design with a serif headline, a dark design with a large sans-serif slogan, a beige brutalist design with heavy black type and a green italic word, and the final white design with the name in huge black capitals above black section bands and a grid of tiles."
-caption: "The design directions, left to right: A (lab notebook), B (pit wall), C (brutalist, first pass), and the third pass of C that the site now uses."
+coverAlt: "The top of the home page: a grey band listing awards, the name Siddharth Krishna in huge black capitals, a short introduction, then a black Research band above the first project tiles."
+caption: "The home page as it is now. Screenshot of the built site."
 stats:
   - value: "41"
     label: "projects in the source, released one at a time"
@@ -46,4 +46,4 @@ The second problem showed up in review. When a reader turned up their browser's 
 
 ## Where it stands
 
-The site runs locally and is not published yet. All 41 projects are in the source. Each one goes live once its page is finished, and the rest stay hidden until then. The agent checks so far cover the build, navigation, keyboard use, reflow and focus. That is not a full accessibility review. Screen-reader output has not been checked. The next step is to finish the content, then choose where to host it.
+The site is live at portfolio.siddharthkrishna.com, hosted on Vercel. All 41 projects are in the source, and 8 are released so far. Each of the others goes live once its page is finished, and stays hidden until then. The agent checks so far cover the build, navigation, keyboard use, reflow and focus. That is not a full accessibility review. Screen-reader output has not been checked. The next step is to finish the remaining projects.
