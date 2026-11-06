@@ -10,7 +10,7 @@ coverAlt: "Four home-page mockups side by side: a cream notebook design with a s
 caption: "The design directions, left to right: A (lab notebook), B (pit wall), C (brutalist, first pass), and the third pass of C that the site now uses."
 stats:
   - value: "41"
-    label: "projects on the site"
+    label: "projects in the source, released one at a time"
   - value: "3"
     label: "design directions tried"
   - value: "3"
@@ -46,4 +46,4 @@ The second problem showed up in review. When a reader turned up their browser's 
 
 ## Where it stands
 
-The site runs locally and is not published yet. All 41 projects have their own pages, but many still need covers, media and text. The agent checks so far cover the build, navigation, keyboard use, reflow and focus. That is not a full accessibility review. Screen-reader output has not been checked. The next step is to finish the content, then choose where to host it.
+The site runs locally and is not published yet. All 41 projects are in the source. Each one goes live once its page is finished, and the rest stay hidden until then. The agent checks so far cover the build, navigation, keyboard use, reflow and focus. That is not a full accessibility review. Screen-reader output has not been checked. The next step is to finish the content, then choose where to host it.
