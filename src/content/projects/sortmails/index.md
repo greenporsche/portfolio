@@ -1,7 +1,6 @@
 ---
 title: "sortmails"
-category: "Utils"
-subgroup: "Personal productivity"
+category: "Software I built"
 order: 9
 summary: "Smart mail."
 ---

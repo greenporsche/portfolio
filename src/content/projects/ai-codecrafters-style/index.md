@@ -1,7 +1,6 @@
 ---
 title: "AI"
-category: "MetaMatx Learning"
-subgroup: "Codecrafters style"
+category: "Learning"
 order: 31
 summary: "[one line]"
 ---

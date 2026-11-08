@@ -1,7 +1,6 @@
 ---
 title: "veggie-menus"
-category: "Utils"
-subgroup: "More tools"
+category: "Software I built"
 order: 16
 summary: "Only the menu items you can eat."
 ---

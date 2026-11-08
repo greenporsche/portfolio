@@ -1,7 +1,6 @@
 ---
 title: "Textbooks viewer"
-category: "Catalog + Consume"
-subgroup: "CourseTube"
+category: "Software I built"
 order: 28
 summary: "[one line]"
 ---

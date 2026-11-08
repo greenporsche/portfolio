@@ -1,13 +1,8 @@
-// Category order and sub-groups, from kiku's write-up (room 78, #46584) plus Research (#46590).
+// Home page sections, in order (PO msg 1408 re-evaluation; proposal msg 1409).
 export const CATEGORIES = [
   { name: 'Research', subgroups: [] },
-  { name: 'Racing', subgroups: [] },
-  { name: 'Utils', subgroups: ['Personal productivity', 'More tools'] },
-  { name: 'Catalog + Consume', subgroups: ['Music', 'Movies', 'CourseTube'] },
-  {
-    name: 'MetaMatx Learning',
-    subgroups: ['Codecrafters style', 'AoPS / Math Academy style', 'Articulate & Sana style', 'More'],
-  },
+  { name: 'Software I built', subgroups: [] },
+  { name: 'Learning', subgroups: [] },
 ] as const;
 
 export const slugify = (s: string) =>

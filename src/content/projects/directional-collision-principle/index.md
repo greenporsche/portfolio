@@ -1,7 +1,7 @@
 ---
 published: true
 title: Directional Collision Principle
-category: Research
+category: "Research"
 order: 1
 wide: true
 summary: Predicting which neural-network inputs are vulnerable to attack. 87.5% accuracy, 100% recall.

@@ -1,7 +1,6 @@
 ---
 title: "TBOSM + Trichur Brothers"
-category: "Catalog + Consume"
-subgroup: "Music"
+category: "Software I built"
 order: 18
 summary: "Practice app and recordings."
 ---

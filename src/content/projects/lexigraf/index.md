@@ -1,7 +1,6 @@
 ---
 title: "LexiGraf"
-category: "MetaMatx Learning"
-subgroup: "More"
+category: "Learning"
 order: 39
 summary: "Spelling and vocabulary, by word family."
 ---

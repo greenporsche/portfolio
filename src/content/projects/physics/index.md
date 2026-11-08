@@ -1,7 +1,6 @@
 ---
 title: "Physics"
-category: "MetaMatx Learning"
-subgroup: "AoPS / Math Academy style"
+category: "Learning"
 order: 35
 summary: "[one line]"
 ---

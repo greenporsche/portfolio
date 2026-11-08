@@ -1,7 +1,6 @@
 ---
 title: "Manim-style videos: LexiGraf"
-category: "MetaMatx Learning"
-subgroup: "More"
+category: "Learning"
 order: 41
 summary: "[one line]"
 ---

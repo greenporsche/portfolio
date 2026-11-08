@@ -1,7 +1,6 @@
 ---
 title: "Agents"
-category: "Utils"
-subgroup: "Personal productivity"
+category: "Software I built"
 order: 13
 summary: "[one line]"
 ---

@@ -1,7 +1,6 @@
 ---
 title: "CRM"
-category: "Utils"
-subgroup: "Personal productivity"
+category: "Software I built"
 order: 12
 summary: "People authority."
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Code in Place"
-category: "MetaMatx Learning"
-subgroup: "Codecrafters style"
+category: "Learning"
 order: 30
 summary: "[one line]"
 ---

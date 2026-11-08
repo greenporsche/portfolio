@@ -1,7 +1,6 @@
 ---
 title: "YC"
-category: "MetaMatx Learning"
-subgroup: "Articulate & Sana style"
+category: "Learning"
 order: 37
 summary: "[one line]"
 ---

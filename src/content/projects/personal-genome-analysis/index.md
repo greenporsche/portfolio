@@ -1,8 +1,8 @@
 ---
 published: true
 title: "Personal genome analysis"
-category: "Research"
-order: 5
+category: "Learning"
+order: 21
 summary: "Raw reads to variant calls for my own genome on U-Michigan's HPC cluster. miRcore, 2025."
 lede: "I ran my own DNA sequencing reads through a five-step pipeline on the University of Michigan's Great Lakes cluster, from raw reads to variant calls."
 cover: ./cover.png

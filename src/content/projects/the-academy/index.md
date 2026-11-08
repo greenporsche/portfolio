@@ -1,7 +1,6 @@
 ---
 title: "The Academy"
-category: "MetaMatx Learning"
-subgroup: "Articulate & Sana style"
+category: "Learning"
 order: 38
 summary: "[one line]"
 ---

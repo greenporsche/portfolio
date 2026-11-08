@@ -1,7 +1,6 @@
 ---
 title: "Math"
-category: "MetaMatx Learning"
-subgroup: "AoPS / Math Academy style"
+category: "Learning"
 order: 32
 summary: "[one line]"
 ---

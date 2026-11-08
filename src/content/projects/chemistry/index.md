@@ -1,7 +1,6 @@
 ---
 title: "Chemistry"
-category: "MetaMatx Learning"
-subgroup: "AoPS / Math Academy style"
+category: "Learning"
 order: 36
 summary: "[one line]"
 ---

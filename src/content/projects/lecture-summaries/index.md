@@ -1,7 +1,6 @@
 ---
 title: "Lecture summaries"
-category: "Catalog + Consume"
-subgroup: "CourseTube"
+category: "Software I built"
 order: 27
 summary: "[one line]"
 ---

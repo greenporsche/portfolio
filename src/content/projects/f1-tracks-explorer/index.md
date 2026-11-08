@@ -1,8 +1,8 @@
 ---
 published: true
 title: "drYve.fast"
-category: "Racing"
-order: 7
+category: "Software I built"
+order: 10
 wide: true
 summary: "A browser driving sim of Spa and the Nürburgring, built from public LiDAR and open data."
 lede: A driving simulator in the browser where the road's rise and fall comes from surveyed elevation, not an artist's guess. It runs Spa-Francorchamps and the Nürburgring GP circuit.

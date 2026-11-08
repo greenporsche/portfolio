@@ -1,7 +1,6 @@
 ---
 title: "Saturday Afternoon"
-category: "Catalog + Consume"
-subgroup: "Movies"
+category: "Software I built"
 order: 24
 summary: "[one line]"
 ---

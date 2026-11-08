@@ -1,7 +1,6 @@
 ---
 title: "Timelines: AI"
-category: "MetaMatx Learning"
-subgroup: "More"
+category: "Learning"
 order: 40
 summary: "[one line]"
 ---

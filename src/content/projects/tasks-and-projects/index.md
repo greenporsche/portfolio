@@ -1,7 +1,6 @@
 ---
 title: "Tasks + projects"
-category: "Utils"
-subgroup: "Personal productivity"
+category: "Software I built"
 order: 11
 summary: "Linear-style task and project management."
 ---

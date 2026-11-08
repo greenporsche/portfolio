@@ -1,7 +1,6 @@
 ---
 title: "AI + CS course viewer"
-category: "Catalog + Consume"
-subgroup: "CourseTube"
+category: "Software I built"
 order: 25
 summary: "[one line]"
 ---

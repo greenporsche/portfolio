@@ -1,7 +1,6 @@
 ---
 title: "arrahman.in"
-category: "Catalog + Consume"
-subgroup: "Music"
+category: "Software I built"
 order: 19
 summary: "[one line]"
 ---

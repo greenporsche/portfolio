@@ -1,9 +1,8 @@
 ---
 published: true
 title: "MetaMatx"
-category: "Catalog + Consume"
-subgroup: "CourseTube"
-order: 29
+category: "Software I built"
+order: 11
 summary: "Murphy's ML textbook as a graph: 4,812 entries and 20,207 prerequisite links."
 lede: "A page that opens a whole textbook as a graph of what each idea needs. It runs on Kevin Murphy's Probabilistic Machine Learning, built from AI-written concept maps of every chapter."
 cover: ./cover.png

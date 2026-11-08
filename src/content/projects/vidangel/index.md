@@ -1,7 +1,6 @@
 ---
 title: "VidAngel"
-category: "Catalog + Consume"
-subgroup: "Movies"
+category: "Software I built"
 order: 23
 summary: "[one line]"
 ---

@@ -1,8 +1,8 @@
 ---
 published: true
 title: "This site"
-category: "Utils"
-order: 8
+category: "Software I built"
+order: 14
 summary: "The portfolio itself, and how it was made."
 lede: "A static site that puts my projects in one place. AI coding agents designed and built it. A person chose the design."
 cover: ./cover.png

@@ -1,7 +1,6 @@
 ---
 title: "CarnaticTube"
-category: "Catalog + Consume"
-subgroup: "Music"
+category: "Software I built"
 order: 20
 summary: "Carnatic music, grouped by raga."
 ---

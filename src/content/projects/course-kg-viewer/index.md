@@ -1,7 +1,6 @@
 ---
 title: "Course KG viewer"
-category: "Catalog + Consume"
-subgroup: "CourseTube"
+category: "Software I built"
 order: 26
 summary: "A course as a map of its concepts."
 ---

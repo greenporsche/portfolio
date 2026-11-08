@@ -1,7 +1,6 @@
 ---
 title: "Lean: thusproved.com"
-category: "MetaMatx Learning"
-subgroup: "AoPS / Math Academy style"
+category: "Learning"
 order: 34
 summary: "[one line]"
 ---

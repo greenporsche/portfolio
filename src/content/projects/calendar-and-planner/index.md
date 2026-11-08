@@ -1,7 +1,6 @@
 ---
 title: "Calendar + planner"
-category: "Utils"
-subgroup: "Personal productivity"
+category: "Software I built"
 order: 10
 summary: "Sunsama-style daily planning."
 ---

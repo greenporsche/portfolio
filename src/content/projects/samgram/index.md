@@ -1,7 +1,6 @@
 ---
 title: "samgram"
-category: "Utils"
-subgroup: "More tools"
+category: "Software I built"
 order: 14
 summary: "TweetDeck-style crowd intelligence."
 ---

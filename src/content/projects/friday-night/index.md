@@ -1,7 +1,6 @@
 ---
 title: "Friday Night"
-category: "Catalog + Consume"
-subgroup: "Movies"
+category: "Software I built"
 order: 21
 summary: "[one line]"
 ---

@@ -1,7 +1,6 @@
 ---
 title: "AI"
-category: "MetaMatx Learning"
-subgroup: "AoPS / Math Academy style"
+category: "Learning"
 order: 33
 summary: "[one line]"
 ---

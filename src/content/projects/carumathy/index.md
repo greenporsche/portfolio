@@ -1,7 +1,6 @@
 ---
 title: "carumathy"
-category: "Utils"
-subgroup: "More tools"
+category: "Software I built"
 order: 17
 summary: "[one line]"
 ---

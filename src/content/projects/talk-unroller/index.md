@@ -1,7 +1,6 @@
 ---
 title: "talk-unroller"
-category: "Utils"
-subgroup: "More tools"
+category: "Software I built"
 order: 15
 summary: "[one line]"
 ---

@@ -1,7 +1,6 @@
 ---
 title: "1% Club"
-category: "Catalog + Consume"
-subgroup: "Movies"
+category: "Software I built"
 order: 22
 summary: "A family game-show night."
 ---
