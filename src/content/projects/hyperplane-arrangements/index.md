@@ -17,7 +17,9 @@ when: "Fall 2025. Final project for Euler Circle's Combinatorics course, finishe
 builtWith: "LaTeX"
 links:
   - label: "Read the paper (PDF)"
-    href: "https://github.com/greenporsche/euler-circle/blob/main/4.%20combinatorics/Hyperplane%20Arrangements.pdf"
+    href: "https://github.com/greenporsche/euler-circle/blob/main/4.%20combinatorics/Hyperplane%20Arrangements/Hyperplane%20Arrangements.pdf"
+  - label: "Presentation slides (PDF)"
+    href: "https://github.com/greenporsche/euler-circle/blob/main/4.%20combinatorics/Hyperplane%20Arrangements%20Presentation/Hyperplane%20Arrangements%20Presentation.pdf"
   - label: "Euler Circle Combinatorics course"
     href: "https://eulercircle.com/classes/combinatorics/"
 ---

@@ -19,7 +19,9 @@ when: "Summer 2024. Paper dated June 2024"
 builtWith: LaTeX
 links:
   - label: Paper (PDF)
-    href: https://github.com/greenporsche/euler-circle/blob/main/2.%20irpw/Dynamical-Systems-Paper.pdf
+    href: https://github.com/greenporsche/euler-circle/blob/main/2.%20irpw/Stability%20Analysis%20in%20Dynamical%20Systems/Stability%20Analysis%20in%20Dynamical%20Systems.pdf
+  - label: Presentation slides (PDF)
+    href: https://github.com/greenporsche/euler-circle/blob/main/2.%20irpw/Stability%20Analysis%20in%20Dynamical%20Systems%20-%20Presentation/Stability%20Analysis%20in%20Dynamical%20Systems%20-%20Presentation.pdf
 ---
 
 ## Why I built it
