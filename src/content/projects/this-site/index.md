@@ -9,7 +9,7 @@ cover: ./cover.png
 coverAlt: "The top of the home page: a grey band listing awards, the name Siddharth Krishna in huge black capitals, a short introduction, then a black Research band above the first project tiles."
 caption: "The home page as it is now. Screenshot of the built site."
 stats:
-  - value: "41"
+  - value: "48"
     label: "projects in the source, released one at a time"
   - value: "3"
     label: "design directions tried"
@@ -46,4 +46,4 @@ The second problem showed up in review. When a reader turned up their browser's 
 
 ## Where it stands
 
-The site is live at portfolio.siddharthkrishna.com, hosted on Vercel. All 41 projects are in the source, and 8 are released so far. Each of the others goes live once its page is finished, and stays hidden until then. The agent checks so far cover the build, navigation, keyboard use, reflow and focus. That is not a full accessibility review. Screen-reader output has not been checked. The next step is to finish the remaining projects.
+The site is live at portfolio.siddharthkrishna.com, hosted on Vercel. All 48 projects are in the source, and 15 are released so far. Each of the others goes live once its page is finished, and stays hidden until then. The agent checks so far cover the build, navigation, keyboard use, reflow and focus. That is not a full accessibility review. Screen-reader output has not been checked. The next step is to finish the remaining projects.
