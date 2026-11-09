@@ -51,7 +51,7 @@ Euler Circle teaches proof-based math to high school students. Each course has w
 
 One example is the cover. The recurrence a(n+1) = 2a(n) + 3ⁿ becomes a statement about the generating function A(x). Solving for A(x) and splitting it into partial fractions gives the closed form a(n) = 2ⁿ + 3ⁿ.
 
-In four of these courses I also wrote an expository paper, and each has its own page: [Hyperplane Arrangements](/projects/hyperplane-arrangements/) (Combinatorics), [Dobinski's Formula](/projects/dobinskis-formula/) (Infinite Series), [2-adic Numbers in Cryptography](/projects/2-adic-numbers-in-cryptography/) (p-adic Analysis) and the [Generating Functions paper summary](/projects/generating-functions-paper-summary/).
+In three of these courses I also wrote a finished expository paper, and each has its own page: [Hyperplane Arrangements](/projects/hyperplane-arrangements/) (Combinatorics), [Dobinski's Formula](/projects/dobinskis-formula/) (Infinite Series) and [2-adic Numbers in Cryptography](/projects/2-adic-numbers-in-cryptography/) (p-adic Analysis). For Generating Functions, the paper is still a proposal: see the [Generating Functions paper summary](/projects/generating-functions-paper-summary/).
 
 ## Where it stands
 
