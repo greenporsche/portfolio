@@ -24,7 +24,7 @@ links:
 
 ## Why I built it
 
-I wrote this paper for the Infinite Series course at Euler Circle in winter 2026. <mark>[In Sisi's own words: why he picked Dobinski's formula, and whether it was the course's final project.]</mark>
+I wrote this paper for the Infinite Series course at Euler Circle in winter 2026.
 
 ## How I built it
 
@@ -62,4 +62,4 @@ I show this estimator is unbiased: its expected value is exactly Bₙ. The paper
 
 ## Where it stands
 
-The paper is finished and public in my Euler Circle repo. It describes the sampling estimator and proves it is unbiased, but does not run it or measure how many samples it needs. <mark>[Anything Sisi wants to add about next steps, in his words.]</mark>
+The paper is finished and public in my Euler Circle repo. It describes the sampling estimator and proves it is unbiased, but does not run it or measure how many samples it needs.

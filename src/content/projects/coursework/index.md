@@ -28,7 +28,7 @@ links:
 
 ## Computer science
 
-**CIS 61, Structure and Interpretation of Computer Programs.** Fall 2024, in the Peralta Community College District <mark>(which college?)</mark>. The course is about procedural and data abstraction, modularity and state. The repo has my code for 10 labs and 4 projects, in Python. The labs move from functions and recursion to trees, objects and linked lists. The projects come with starter code and autograders from UC Berkeley's 61A course.
+**CIS 61, Structure and Interpretation of Computer Programs.** Fall 2024, in the Peralta Community College District. The course is about procedural and data abstraction, modularity and state. The repo has my code for 10 labs and 4 projects, in Python. The labs move from functions and recursion to trees, objects and linked lists. The projects come with starter code and autograders from UC Berkeley's 61A course.
 
 In the Maps project I charted the mood of tweets across the US. I grouped tweets by state, scored each tweet's words for sentiment, and averaged the scores per state. To place each state on the map, I found the center of its polygons, weighted by area. Two projects are not complete. Ants vs. SomeBees still has one unwritten method. The Scheme interpreter is in the repo as starter code only.
 
@@ -36,7 +36,7 @@ In the Maps project I charted the mood of tweets across the US. I grouped tweets
 
 I wrote a hash map, a binary search tree, and insertion sort, Shell sort, merge sort and quicksort. The last assignment was a small library system. It started as a class of empty methods. I stored the books in a linked list and indexed them with two binary search trees, one by title and author and one by ISBN. It can check books out, return them, and save and load the library from a file.
 
-**COMSC 28, Foundations of Data Science.** Spring 2025 <mark>(which school?)</mark>. The course uses the public materials of Berkeley's Data 8, in Jupyter notebooks. I completed the first three homeworks and the first three labs, and submitted them in February 2025. The rest of the notebooks in the repo are still blank. In Homework 3 I used Census population estimates for 2015 to 2016 to compute the US birth rate for that year, about 1.24%. Then I plotted birth rate against death rate for all 50 states, DC and Puerto Rico.
+**COMSC 28, Foundations of Data Science.** Spring 2025. The course uses the public materials of Berkeley's Data 8, in Jupyter notebooks. I completed the first three homeworks and the first three labs, and submitted them in February 2025. The rest of the notebooks in the repo are still blank. In Homework 3 I used Census population estimates for 2015 to 2016 to compute the US birth rate for that year, about 1.24%. Then I plotted birth rate against death rate for all 50 states, DC and Puerto Rico.
 
 ## Euler Circle mathematics
 
@@ -51,7 +51,7 @@ Euler Circle teaches proof-based math to high school students. Each course has w
 
 One example is the cover. The recurrence a(n+1) = 2a(n) + 3ⁿ becomes a statement about the generating function A(x). Solving for A(x) and splitting it into partial fractions gives the closed form a(n) = 2ⁿ + 3ⁿ.
 
-In several of these courses I also wrote an expository paper. Those have their own pages here <mark>(link which ones?)</mark>.
+In four of these courses I also wrote an expository paper, and each has its own page: [Hyperplane Arrangements](/projects/hyperplane-arrangements/) (Combinatorics), [Dobinski's Formula](/projects/dobinskis-formula/) (Infinite Series), [2-adic Numbers in Cryptography](/projects/2-adic-numbers-in-cryptography/) (p-adic Analysis) and the [Generating Functions paper summary](/projects/generating-functions-paper-summary/).
 
 ## Where it stands
 

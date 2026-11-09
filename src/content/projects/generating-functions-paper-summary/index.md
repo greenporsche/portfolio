@@ -24,7 +24,7 @@ links:
 
 ## Why I built it
 
-I wrote this summary for the Generating Functions course at Euler Circle in October 2026. It previews the expository paper I will write for the course. <mark>[In Sisi's own words: why he picked the root degree of random trees.]</mark>
+I wrote this summary for the Generating Functions course at Euler Circle in October 2026. It previews the expository paper I will write for the course.
 
 ## How I built it
 
@@ -53,8 +53,7 @@ I plan to show how this one formula gives back both limits above. Flajolet and S
 ## What I did
 
 - I wrote the two-page summary and typeset it in LaTeX.
-- I chose the two kinds of tree to compare and the framework that ties them together. <mark>[Confirm the topic was his choice, not assigned.]</mark>
 
 ## Where it stands
 
-This is a proposal. The summary states the goals, and none of the proofs are written yet. The full paper is not in my repo. <mark>[Status of the paper, and when it is due, in Sisi's words.]</mark> The course itself is still running this fall.
+This is a proposal. The summary states the goals, and none of the proofs are written yet. The full paper is not in my repo. The course itself is still running this fall.

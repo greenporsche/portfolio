@@ -24,33 +24,28 @@ links:
     href: "https://www.usaaio.org/"
 ---
 
-## Why I built it
-
-<mark>In my own words: why I kept a training repo, and why I made it public.</mark>
-
 ## How I built it
 
 The USA AI Olympiad has two rounds. Round 1 is taken at school. Round 2 is held at MIT. Contestants derive results by hand and also code them in Python and PyTorch, often without high-level libraries. In 2025 Round 1 was on 24 March and Round 2 on 27 April. In 2026 they were on 30 January and 4–5 April.
 
 The repo has three parts.
 
-**The 2025 contest problems, answered.** Round 1 and Round 2 each had three problems worth 100 points, every one split into parts. The repo has all six with every part filled in, 83 parts in all. <mark>These are my own answers.</mark> They differ from the official Round 1 solutions, which are also in the repo. The topics:
+**The 2025 contest problems, answered.** Round 1 and Round 2 each had three problems worth 100 points, every one split into parts. The repo has all six with every part filled in, 83 parts in all. The answers differ from the official Round 1 solutions, which are also in the repo. The topics:
 
 - Round 1: Fibonacci numbers through eigendecomposition, a small neural network trained in PyTorch, and a Titanic data pipeline with logistic regression by gradient descent and by Newton's method.
 - Round 2: a physics-informed neural network for the heat equation, multi-head attention and two of its variants (grouped-query and multi-head latent attention), and CLIP.
 
 For the heat-equation problem, the network takes a time and a position and outputs a temperature. The loss punishes it for breaking the equation, the starting condition and the edge conditions. Derivatives come from `torch.autograd.grad`. After 1,000 epochs its mean squared error against the exact solution was 3.9 × 10⁻⁵ on a 101 × 101 grid.
 
-**Study notebooks from 2025.** Ten Jupyter notebooks, from mathematical foundations to generative AI. <mark>Who wrote them, and how?</mark>
+**Study notebooks from 2025.** Ten Jupyter notebooks, from mathematical foundations to generative AI.
 
-**A plan for 2026.** Twelve units follow the USAAIO syllabus and the BeaverEdge course sequence. Each unit has a cheat sheet, study guides, pencil-and-paper exercises with solutions, and practice notebooks in the Round 2 format with blank answer cells. There are also 14 practice sets built as variations on the official 2026 Round 1 sample problems, and a Round 2 plan that works backward from the three 2025 Round 2 problems. I did not write the 2026 material by hand. The twelve units were generated in one day, 24 February 2026, and the practice sets were generated too, <mark>with an AI model (which one?)</mark>. A small Python script converts the practice sets from Markdown to notebooks.
+**A plan for 2026.** Twelve units follow the USAAIO syllabus and the BeaverEdge course sequence. Each unit has a cheat sheet, study guides, pencil-and-paper exercises with solutions, and practice notebooks in the Round 2 format with blank answer cells. There are also 14 practice sets built as variations on the official 2026 Round 1 sample problems, and a Round 2 plan that works backward from the three 2025 Round 2 problems. I did not write the 2026 material by hand. The twelve units were generated in one day, 24 February 2026, and the practice sets were generated too. A small Python script converts the practice sets from Markdown to notebooks.
 
 ## What I did
 
-- Worked through all six 2025 contest problems, part by part. <mark>Confirm.</mark>
 - Trained the heat-equation network and checked it against the exact solution.
-- Set up the 2026 study plan and practice sets, and the Round 2 gap analysis. <mark>Say what you chose and what you did with them.</mark>
+- Set up the 2026 study plan and practice sets, and the Round 2 gap analysis.
 
 ## Where it stands
 
-The repo was last updated on 24 February 2026, between the two 2026 rounds. Its README still says I had requalified for Round 2. I won national gold in 2025 and again in 2026. The repo does not record how I prepared after February, so this page does not claim that the 2026 plan led to the result. <mark>Did you work through the 2026 units? Will you update the repo?</mark>
+The repo was last updated on 24 February 2026, between the two 2026 rounds. Its README still says I had requalified for Round 2. I won national gold in 2025 and again in 2026. The repo does not record how I prepared after February, so this page does not claim that the 2026 plan led to the result.

@@ -28,7 +28,7 @@ links:
 
 ## Why I built it
 
-This paper was my final project for the p-adic Analysis course at Euler Circle in spring 2026. <mark>[In Sisi's own words: why he picked cryptography as the application of p-adic numbers.]</mark>
+This paper was my final project for the p-adic Analysis course at Euler Circle in spring 2026.
 
 ## How I built it
 
@@ -59,9 +59,9 @@ The new bit is aₙ = σₙ mod 2, and the new carry is mₙ = (σₙ − aₙ)/
 
 - I wrote the paper and typeset it in LaTeX. The title page lists only me.
 - I wrote out the full proof of the main theorem and worked the example with connection integer 5.
-- I made a 15-slide presentation on the paper, "From carries to stream ciphers", and gave it. It walks through the proof idea and the q = 5 example step by step, with a table of each sum, output bit and carry. <mark>[When and to whom he presented it.]</mark>
+- I made a 15-slide presentation on the paper, "From carries to stream ciphers". It walks through the proof idea and the q = 5 example step by step, with a table of each sum, output bit and carry.
 - I cite Klapper and Goresky's "2-adic Shift Registers" for the 2-adic span and the attack.
 
 ## Where it stands
 
-The paper and the slides are finished and public in my Euler Circle repo. The paper explains the rational approximation attack in words. It does not carry one out. <mark>[Anything Sisi wants to add about next steps, in his words.]</mark>
+The paper and the slides are finished and public in my Euler Circle repo. The paper explains the rational approximation attack in words. It does not carry one out.
