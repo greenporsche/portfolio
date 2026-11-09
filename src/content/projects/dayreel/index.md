@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Dayreel"
 category: "Software I built"
 order: 12
@@ -22,10 +22,6 @@ links:
     href: "https://github.com/greenporsche/dayreel"
 ---
 
-## Why I built it
-
-<mark>In my own words: why I wanted a record of my screen through the day, and what I use it for.</mark>
-
 ## How I built it
 
 Dayreel lives in the menu bar as a small ring. The ring fills red while it is capturing. On a timer it takes a still image of each display with ScreenCaptureKit. With more than one display, Core Graphics stitches them onto one canvas in the same arrangement as System Settings › Displays, each at full resolution. ImageIO writes the result as one JPEG. Files go into one folder per day, named by the time, for example `261102/261102-143022.jpg`.
@@ -34,7 +30,7 @@ The Settings window is a SwiftUI form. It sets the save folder, the JPEG quality
 
 There is no Xcode project. A short shell script compiles the one Swift file with `swiftc`, builds the `.app` bundle by hand and signs it. Another small Swift script draws the app icon.
 
-I built it by directing AI coding agents. The commits record my product calls as "PO decision", for example the name, the bundle ID and the license. <mark>Confirm which agents wrote and reviewed the code.</mark>
+I built it by directing AI coding agents. The commits record my product calls as "PO decision", for example the name, the bundle ID and the license.
 
 ## The hard part
 
@@ -48,8 +44,7 @@ Stitching every display at full resolution makes large files. In one measured se
 
 - Set what the app should do and decided its name, Dayreel. It started as InstantShot.
 - Made the product calls recorded in the commits: the `app.dayreel` bundle ID and the MIT license.
-- <mark>Anything else: for example, asking for the status line to move into the menu, or for Open at login.</mark>
 
 ## Where it stands
 
-It works on Macs with Apple silicon and macOS 14 or later. You build it from source with Apple's Command Line Tools. There is no downloadable release, and the app is not notarized. <mark>Do I use it every day? Is anything planned next?</mark>
+It works on Macs with Apple silicon and macOS 14 or later. You build it from source with Apple's Command Line Tools. There is no downloadable release, and the app is not notarized.

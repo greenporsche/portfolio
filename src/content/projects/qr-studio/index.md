@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "QR Studio"
 category: "Software I built"
 order: 13
@@ -24,10 +24,6 @@ links:
     href: "https://github.com/greenporsche/qr-studio"
 ---
 
-## Why I built it
-
-<mark>In my own words: what I needed a nicer QR code for.</mark>
-
 ## How I built it
 
 It is one page built with Vite and TypeScript. The library qr-code-styling draws the code as SVG. Every code uses error-correction level H, the highest of the four.
@@ -38,13 +34,10 @@ Under Customize you can change the dot shape (six choices), the corner shape (th
 
 No link is sent to a server. The code is drawn in the page. A GitHub Actions workflow builds the site on every push and publishes it to GitHub Pages, which serves it at qr.siddharthkrishna.com.
 
-<mark>How the code was written: by me, or by directing an AI coding agent?</mark>
-
 ## What I did
 
-- <mark>What I decided: for example the four styles and their colours, deriving the whole look from two colours, and the light and dark modes.</mark>
 - Put it online with an automatic deploy to GitHub Pages under my own domain.
 
 ## Where it stands
 
-It is live and free to use, with no sign-up. The README warns that decorative codes are a little less robust than plain ones. Very pale gradients can fail to scan, and some scanners can't read the light-on-dark codes from dark mode, so it says to test-scan before printing. <mark>Anything planned next?</mark>
+It is live and free to use, with no sign-up. The README warns that decorative codes are a little less robust than plain ones. Very pale gradients can fail to scan, and some scanners can't read the light-on-dark codes from dark mode, so it says to test-scan before printing.
